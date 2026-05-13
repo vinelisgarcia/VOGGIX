@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { DemoModal } from "@/components/DemoModal";
+import { ContactSection } from "@/components/ContactSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -31,6 +32,7 @@ export function LandingPage() {
         <PricingSection onDemoClick={() => setIsDemoOpen(true)} />
         <UseCasesSection />
         <FAQSection />
+        <ContactSection />
         <FinalCTA onDemoClick={() => setIsDemoOpen(true)} />
       </main>
       <Footer />

@@ -34,12 +34,12 @@ export function Footer() {
               </li>
               <li>
                 <a href={brand.whatsappHref} className="hover:text-voggix-blue">
-                  WhatsApp TODO {brand.whatsappPlaceholder}
+                  WhatsApp {brand.whatsappDisplay}
                 </a>
               </li>
               <li>
-                <a href="#inicio" className="hover:text-voggix-blue">
-                  Solicitar demo
+                <a href="#contacto" className="hover:text-voggix-blue">
+                  Solicitar información
                 </a>
               </li>
             </ul>

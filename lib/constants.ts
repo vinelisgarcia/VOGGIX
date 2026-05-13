@@ -12,11 +12,10 @@ export const brand = {
     cloud: "#F8FAFC"
   },
   email: "hola@voggix.com",
-  // TODO: Reemplazar por el número oficial en formato internacional, sin signos ni espacios.
-  whatsappPlaceholder: "REEMPLAZAR_WHATSAPP",
-  // TODO: Reemplazar REEMPLAZAR_WHATSAPP antes de producción.
+  whatsappDisplay: "+1 829 764 7616",
+  whatsappNumber: "18297647616",
   whatsappHref:
-    "https://wa.me/REEMPLAZAR_WHATSAPP?text=Hola%20Voggix%2C%20quiero%20digitalizar%20mi%20negocio.",
+    "https://wa.me/18297647616?text=Hola%20Voggix%2C%20quiero%20digitalizar%20mi%20negocio.",
   // TODO: Reemplazar por la URL real de la aplicación cuando esté disponible.
   loginUrl: "/login"
 };
@@ -26,7 +25,8 @@ export const navItems = [
   { label: "Verticales", href: "#verticales" },
   { label: "Studio", href: "#studio" },
   { label: "Precios", href: "#precios" },
-  { label: "FAQ", href: "#faq" }
+  { label: "FAQ", href: "#faq" },
+  { label: "Contacto", href: "#contacto" }
 ];
 
 export const heroMicroBenefits = [
@@ -58,41 +58,81 @@ export const painPoints = [
 
 export const verticals = [
   {
+    key: "barber",
     name: "Voggix Barber",
     shortName: "Barber",
     color: "#10B981",
+    surface: "#ECFDF5",
+    dark: "#064E3B",
+    iconLabel: "Tijeras de barbería",
+    heroTitle: "Agenda por barbero, servicios recurrentes y días llenos.",
+    heroText:
+      "Reservas por profesional, duración por servicio, clientes frecuentes y promociones para horarios con baja ocupación.",
+    heroMetric: "24 cortes hoy",
     text: "Gestiona barberías, barberos, servicios y clientes recurrentes.",
     cta: "Ver más"
   },
   {
+    key: "dental",
     name: "Voggix Dental",
     shortName: "Dental",
     color: "#2563EB",
+    surface: "#EFF6FF",
+    dark: "#1E3A8A",
+    iconLabel: "Diente dental",
+    heroTitle: "Citas confirmadas, doctores organizados y menos ausencias.",
+    heroText:
+      "Agenda por doctor, recordatorios, confirmaciones y seguimiento para clínicas que necesitan orden real.",
+    heroMetric: "18 citas confirmadas",
     text: "Organiza citas, recordatorios y seguimiento para clínicas dentales.",
     cta: "Ver más"
   },
   {
+    key: "tattoo",
     name: "Voggix Tattoo",
     shortName: "Tattoo",
     color: "#111827",
+    surface: "#F3F4F6",
+    dark: "#030712",
+    iconLabel: "Máquina de tatuaje",
+    heroTitle: "Convierte consultas en sesiones reservadas.",
+    heroText:
+      "Portafolio, brief previo, depósito opcional, agenda por artista y seguimiento de sesiones.",
+    heroMetric: "7 briefs listos",
     text: "Convierte consultas en sesiones reservadas y muestra tu portafolio.",
     cta: "Ver más"
   },
   {
+    key: "beauty",
     name: "Voggix Beauty",
     shortName: "Beauty",
     color: "#D4A13C",
+    surface: "#FFFBEB",
+    dark: "#92400E",
+    iconLabel: "Perfil beauty",
+    heroTitle: "Servicios por duración, paquetes y clientas recurrentes.",
+    heroText:
+      "Salones, spas, uñas, estilistas y beauty pros con reservas claras y seguimiento comercial.",
+    heroMetric: "32 reservas beauty",
     text: "Impulsa salones, spas, uñas, estilistas y beauty pros.",
     cta: "Ver más"
   },
   {
+    key: "studio",
     name: "Voggix Studio",
     shortName: "Studio",
     color: "#2563EB",
+    surface: "#EEF2FF",
+    dark: "#172554",
+    iconLabel: "Código web",
+    heroTitle: "Tu web, identidad y reservas conectadas.",
+    heroText:
+      "Landing, web premium, marca, WhatsApp, Google Business Profile y reservas conectadas desde el primer día.",
+    heroMetric: "Web lista para reservar",
     text: "Crea tu web, identidad visual y presencia digital conectada a reservas.",
     cta: "Conocer Studio"
   }
-];
+] as const;
 
 export const features = [
   {
@@ -161,54 +201,72 @@ export const studioServices = [
 
 export const pricingPlans = [
   {
-    name: "Start",
-    description: "Para negocios que quieren empezar con reservas digitales.",
-    cta: "Solicitar demo",
+    name: "Voggix Verticales",
+    eyebrow: "Barber, Dental, Beauty y Tattoo",
+    price: "20 USD",
+    cadence: "/mes por centro",
+    description: "Tarifa plana para operar reservas, agenda y clientes sin límites artificiales.",
+    cta: "Solicitar activación",
     featured: false,
     items: [
-      "Perfil profesional",
-      "Reservas básicas",
-      "Agenda y servicios",
-      "Formulario de contacto"
+      "Reservas ilimitadas",
+      "Agenda, equipo y servicios",
+      "Clientes e historial",
+      "Recordatorios y perfil profesional"
     ]
   },
   {
-    name: "Pro",
-    description: "Para negocios que necesitan más control, clientes y crecimiento.",
-    cta: "Quiero Pro",
+    name: "Verticales + pagos",
+    eyebrow: "Cobros dentro de Voggix",
+    price: "35 USD",
+    cadence: "/mes total",
+    description: "Para negocios que quieren procesar pagos desde la propia plataforma.",
+    cta: "Activar pagos",
     featured: true,
     items: [
-      "Todo en Start",
-      "Gestión de clientes",
-      "Recordatorios",
-      "Reportes y promociones"
+      "Todo el plan vertical",
+      "Procesamiento de pagos",
+      "Confirmación de reserva",
+      "Flujo preparado para depósitos"
     ]
   },
   {
-    name: "Studio",
-    description: "Para negocios que necesitan web, marca y presencia digital.",
-    cta: "Cotizar Studio",
+    name: "Studio Web Básica",
+    eyebrow: "Presencia digital inicial",
+    price: "250 USD",
+    cadence: "pago único",
+    description: "Landing profesional conectada a reservas, WhatsApp, Google y redes.",
+    cta: "Cotizar básica",
     featured: false,
     items: [
-      "Landing o web completa",
-      "Identidad visual",
-      "Google y WhatsApp",
-      "Reservas conectadas"
+      "Landing de conversión",
+      "Copy base y estructura",
+      "Integración con WhatsApp",
+      "Conexión a reservas"
     ]
   },
   {
-    name: "Custom",
-    description: "Para clínicas, cadenas, equipos grandes o integraciones especiales.",
-    cta: "Hablar con ventas",
+    name: "Studio Web Premium",
+    eyebrow: "Marca y web más completa",
+    price: "350 USD",
+    cadence: "pago único",
+    description: "Web premium para negocios que necesitan una presencia más sólida y diferenciada.",
+    cta: "Cotizar premium",
     featured: false,
     items: [
-      "Implementación a medida",
-      "Soporte avanzado",
-      "Integraciones",
-      "Onboarding personalizado"
+      "Web con más secciones",
+      "Dirección visual premium",
+      "SEO local base",
+      "Reservas, WhatsApp y redes"
     ]
   }
 ];
+
+export const customPricingNote = {
+  title: "Casos grandes y proyectos especiales",
+  text: "Clínicas, cadenas, multi-sedes, integraciones, automatizaciones o proyectos de marca avanzados se cotizan aparte.",
+  cta: "Hablar con ventas"
+};
 
 export const useCases = [
   {

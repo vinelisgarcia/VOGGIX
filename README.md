@@ -57,11 +57,11 @@ TODO producción:
 - Guardar consentimiento si el flujo comercial lo requiere.
 - Agregar analytics de conversión si aplica.
 
-## Reemplazar WhatsApp
+## WhatsApp
 
-El placeholder actual es `REEMPLAZAR_WHATSAPP` y está marcado como TODO en `lib/constants.ts`.
+El WhatsApp comercial está configurado en `lib/constants.ts` como `+1 829 764 7616`.
 
-Reemplaza el valor por el número oficial en formato internacional, sin signos ni espacios. No se incluyó ningún número falso.
+Si cambia el número, actualiza `brand.whatsappNumber`, `brand.whatsappDisplay` y `brand.whatsappHref`.
 
 ## Despliegue en Vercel
 
@@ -73,8 +73,7 @@ Reemplaza el valor por el número oficial en formato internacional, sin signos n
 
 ## Pendientes de producción
 
-- Reemplazar `REEMPLAZAR_WHATSAPP`.
 - Reemplazar o activar `brand.loginUrl`.
-- Conectar el formulario de demo.
+- Conectar el formulario de demo y el formulario de contacto.
 - Definir URLs legales reales para términos, privacidad y aviso legal.
 - Ajustar dominio final en metadatos si no será `https://voggix.com`.

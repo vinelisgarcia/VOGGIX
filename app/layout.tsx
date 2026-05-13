@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
 const title = "Voggix — Reservas, gestión y presencia digital para negocios";
 const description =
   "Voggix conecta, organiza y hace crecer negocios de servicios con reservas online, gestión de clientes, recordatorios, promoción digital y páginas web con Voggix Studio.";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["500", "600", "700", "800", "900"]
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://voggix.com"),
@@ -58,7 +72,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>
+      <body className={`${inter.variable} ${poppins.variable}`}>
         {children}
         <script
           type="application/ld+json"

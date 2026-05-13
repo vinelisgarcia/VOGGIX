@@ -42,7 +42,7 @@ export function StudioSection({ onDemoClick }: StudioSectionProps) {
 
 function StudioMockup() {
   return (
-    <div className="rounded-[8px] border border-white/12 bg-gradient-to-br from-voggix-blue/18 via-voggix-violet/18 to-voggix-pink/12 p-4 shadow-glow">
+    <div className="rounded-[8px] border border-white/12 bg-white/[0.06] p-4 shadow-[0_30px_90px_rgba(0,0,0,0.24)]">
       <div className="rounded-[8px] border border-white/14 bg-white p-4 text-voggix-ink">
         <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-4">
           <div className="flex items-center gap-2" aria-hidden="true">
@@ -78,7 +78,7 @@ function StudioMockup() {
                 </div>
               ))}
             </div>
-            <div className="mt-4 rounded-[8px] bg-gradient-to-r from-voggix-blue via-voggix-violet to-voggix-pink px-4 py-3 text-center text-sm font-black text-white">
+            <div className="mt-4 rounded-[8px] bg-voggix-blue px-4 py-3 text-center text-sm font-black text-white">
               Confirmar cita
             </div>
           </div>

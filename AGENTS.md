@@ -6,5 +6,6 @@
 - No inventar testimonios reales, clientes reales ni métricas no marcadas como placeholders.
 - Mantener un tono profesional, tecnológico y cercano.
 - Centralizar textos editables en `lib/constants.ts`.
+- Mantener WhatsApp real en formato internacional en `brand.whatsappHref`.
 - Ejecutar `npm run lint` y `npm run build` antes de finalizar cambios.
-- Reemplazar `REEMPLAZAR_WHATSAPP` y conectar el formulario de demo antes de producción.
+- Conectar formularios de demo/contacto antes de producción si hay backend, CRM, Supabase, email o webhook.

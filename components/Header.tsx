@@ -45,7 +45,7 @@ export function Header({ onDemoClick }: HeaderProps) {
           <button
             type="button"
             onClick={handleDemoClick}
-            className="rounded-lg bg-gradient-to-r from-voggix-blue via-voggix-violet to-voggix-pink px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:brightness-105"
+            className="rounded-lg bg-[#071124] px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-slate-900"
           >
             Quiero una demo
           </button>
@@ -106,7 +106,7 @@ export function Header({ onDemoClick }: HeaderProps) {
             <button
               type="button"
               onClick={handleDemoClick}
-              className="rounded-lg bg-gradient-to-r from-voggix-blue via-voggix-violet to-voggix-pink px-4 py-3 text-sm font-bold text-white"
+              className="rounded-lg bg-[#071124] px-4 py-3 text-sm font-bold text-white"
             >
               Quiero una demo
             </button>

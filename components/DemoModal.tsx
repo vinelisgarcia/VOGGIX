@@ -198,7 +198,7 @@ export function DemoModal({ isOpen, onClose }: DemoModalProps) {
             </div>
             <button
               type="submit"
-              className="mt-2 rounded-lg bg-gradient-to-r from-voggix-blue via-voggix-violet to-voggix-pink px-5 py-3.5 text-sm font-black text-white transition hover:brightness-105"
+              className="mt-2 rounded-lg bg-[#071124] px-5 py-3.5 text-sm font-black text-white transition hover:bg-slate-900"
             >
               Enviar solicitud
             </button>
